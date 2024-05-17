@@ -6,7 +6,7 @@
 
 ## Демо
 
-![Demo](https://drive.google.com/file/d/1kjNOf8BhxsFCdcgf7WQJ7KRgHqG0OR8T/view)
+![Demo](https://s10.gifyu.com/images/SfThB.gif)
 
 # 2.Border - кнопка с бегущей границей
 
@@ -14,7 +14,7 @@
 
 ## Демо
 
-![Demo](https://drive.google.com/file/d/1dm8q2j0QcIC1mn3Z-U50p4XiTsAHniD0/view)
+![Demo](https://s10.gifyu.com/images/SfTh0.gif)
 
 # 3.swipeable-list - список с свайпом
 
@@ -22,4 +22,4 @@
 
 ## Демо
 
-![Demo](https://drive.google.com/file/d/1cwkd6pJyurZCS-BEbBMJ-SIiOkCsaCTl/view)
+![Demo](https://s10.gifyu.com/images/SfThf.gif)
