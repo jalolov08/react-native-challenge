@@ -4,6 +4,7 @@ import { User } from "../../types/user.type";
 import {
   PanGestureHandler,
   PanGestureHandlerGestureEvent,
+  PanGestureHandlerProps,
 } from "react-native-gesture-handler";
 import Animated, {
   useAnimatedGestureHandler,
@@ -12,12 +13,16 @@ import Animated, {
   withTiming,
 } from "react-native-reanimated";
 import { Feather } from "@expo/vector-icons";
-interface ListItemProp {
+interface ListItemProp
+  extends Pick<PanGestureHandlerProps, "simultaneousHandlers"> {
   user: User;
 }
 const { width: SCREEN_WIDTH } = Dimensions.get("window");
 const TRANSLATE_X_THRESHOLD = -SCREEN_WIDTH * 0.3;
-const ListItem: React.FC<ListItemProp> = ({ user }) => {
+
+
+
+const ListItem: React.FC<ListItemProp> = ({ user , simultaneousHandlers }) => {
   const translateX = useSharedValue(0);
   const contHeight = useSharedValue(80);
   const marginVertical = useSharedValue(10);
@@ -57,7 +62,7 @@ const ListItem: React.FC<ListItemProp> = ({ user }) => {
       <Animated.View style={[styles.deleteCont]}>
         <Feather name="trash-2" size={32} color="#fff" />
       </Animated.View>
-      <PanGestureHandler onGestureEvent={panGesture}>
+      <PanGestureHandler simultaneousHandlers={simultaneousHandlers} onGestureEvent={panGesture}>
         <Animated.View style={[styles.container, viewStyle]}>
           <Image source={user.photo} style={styles.photo} />
           <View style={styles.infoContainer}>

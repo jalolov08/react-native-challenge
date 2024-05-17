@@ -1,15 +1,17 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native";
-import React from "react";
+import { StyleSheet, Text, View } from "react-native";
+import React, { useRef } from "react";
 import users from "../../constants/users.constant";
 import ListItem from "../../components/ListItem/listItem.component";
+import { ScrollView } from "react-native-gesture-handler";
 
 const List = () => {
+  const ref = useRef<ScrollView>(null);
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Chats</Text>
-      <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView showsVerticalScrollIndicator={false} ref={ref}>
         {users.map((user) => (
-          <ListItem user={user} key={user.id}  />
+          <ListItem simultaneousHandlers={ref} user={user} key={user.id} />
         ))}
       </ScrollView>
     </View>
