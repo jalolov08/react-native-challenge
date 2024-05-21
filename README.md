@@ -23,3 +23,11 @@
 ## Демо
 
 ![Demo](https://s10.gifyu.com/images/SfThf.gif)
+
+# 4.search-bar - Строка поиска
+
+Этот проект представляет собой пример поиск с анимацией повяления для React Native, используя библиотеку Reanimated .
+
+## Демо
+
+![Demo](https://s12.gifyu.com/images/Sf75Z.gif)
